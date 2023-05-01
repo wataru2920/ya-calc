@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  food: 1
+  daily: 1
+  housing: 1
+  traffic: 1
+  recreation: 1
+  others: 1
+
+two:
+  food: 1
+  daily: 1
+  housing: 1
+  traffic: 1
+  recreation: 1
+  others: 1

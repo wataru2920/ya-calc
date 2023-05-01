@@ -1,0 +1,78 @@
+.button_to {
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.bg_test_top {
+  background-image: url("/top.jpg");
+  background-size: cover;
+}
+
+.bg_test {
+  background-color: #26d0c9;
+}
+
+.header {
+  color: #fff;
+  height: 90px;
+  border-bottom: solid 2px;
+}
+
+.header-logo {
+  margin-top: 10px;
+  float: left;
+}
+
+.youso {
+  font-size: 20px;
+}
+
+.header-user {
+  color: black;
+  float: right;
+  font-size: 20px;
+  margin: 50px 30px 40px 0px;
+}
+
+
+.contents {
+  height: 500px;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+.data-contents {
+  height: 350px;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.footer {
+  color: #fff;
+  height: 90px;
+  border-top: solid 2px;
+}
+
+.footer-logo {
+  float: left;
+  font-size: 36px;
+  padding: 35px 0px 40px 30px;
+}
+
+.source {
+  color: black;
+  padding: 0px 20px;
+}
+
+.f {
+  padding: 10px 0;
+  color: white;
+  background: rgb(251, 170, 88);
+  text-align: center;
+  width: 95%;
+  position: absolute;
+  z-index: 10;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}

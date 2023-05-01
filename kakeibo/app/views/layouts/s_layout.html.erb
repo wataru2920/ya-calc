@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kakeibo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="bg_test">
+      <div class=header>
+        <% if notice %>
+          <div id="notice" class="f"><%= notice %></div>
+        <% end %>
+        <div class="header-logo">
+          <a href="/" class="youso">TOPに戻る</a>
+          <% if @current_user %>
+            <a href="/logout" class="youso">ログアウト</a>
+          <% else %>
+            <a href="/users/new" class="youso">ユーザー登録</a>
+            <a href="/login" class="youso">ログイン</a>
+          <% end %>
+        </div>
+        <div class="header-user">
+          <% if @current_user %>
+            <%= @current_user.username %>
+          <% end %>
+        </div>
+      </div>
+      <%= yield %>
+
+      <div class="footer">
+        <div class="footer-logo">
+          <% if  @current_user %>
+            <%= link_to '家計簿入力', new_calc_path, {class: "youso"} %>
+            <%= link_to '家計簿一覧へ', calcs_path, {class: "youso"} %>
+            <%= link_to 'データの編集', edit_calc_path(@calc), {class: "youso"} %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

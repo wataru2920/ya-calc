@@ -1,0 +1,14 @@
+<div class="contents">
+  <p><%= @ym %>の食費のグラフ</p>
+  <%= column_chart @calcs.group(:hizuke).sum(:food) %>
+  <p><%= @ym %>の日用品費のグラフ</p>
+  <%= column_chart @calcs.group(:hizuke).sum(:daily) %>
+  <p><%= @ym %>の住居費のグラフ</p>
+  <%= column_chart @calcs.group(:hizuke).sum(:housing) %>
+  <p><%= @ym %>の交通費のグラフ</p>
+  <%= column_chart @calcs.group(:hizuke).sum(:traffic) %>
+  <p><%= @ym %>の娯楽費のグラフ</p>
+  <%= column_chart @calcs.group(:hizuke).sum(:recreation) %>
+  <p><%= @ym %>のその他費用のグラフ</p>
+  <%= column_chart @calcs.group(:hizuke).sum(:others) %>
+</div>

@@ -1,0 +1,38 @@
+<h1><%= @calc.hizuke %>の詳細</h1>
+<div class="data-contents">
+  <p>
+  <strong>食費:</strong>
+  <%= number_to_currency(@calc.food) %>
+  </p>
+
+  <p>
+  <strong>日用品費:</strong>
+  <%= number_to_currency(@calc.daily) %>
+  </p>
+
+  <p>
+  <strong>住居費:</strong>
+  <%= number_to_currency(@calc.housing) %>
+  </p>
+
+  <p>
+  <strong>交通費:</strong>
+  <%= number_to_currency(@calc.traffic) %>
+  </p>
+
+  <p>
+  <strong>娯楽費:</strong>
+  <%= number_to_currency(@calc.recreation) %>
+  </p>
+
+  <p>
+  <strong>その他費用:</strong>
+  <%= number_to_currency(@calc.others) %>
+  </p>
+
+  <p>
+  <strong>合計:</strong>
+  <% @total = @calc.food + @calc.daily + @calc.housing + @calc.traffic + @calc.recreation + @calc.others %>
+  <%= number_to_currency(@total) %>
+  </p>
+</div>

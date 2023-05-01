@@ -1,0 +1,17 @@
+<h1>ログイン画面</h1>
+
+<%= form_tag("/login") do %>
+  <div class="user-contents">
+    <% if @error %>
+      <div class="form-error">
+        <%= @error %>
+      </div>
+    <% end %>
+    <p class="la">メールアドレス</p>
+    <input class="fo-mu" name="email" type="email" value=<%= @email %>>
+    <p class="la">パスワード</p>
+    <input class="fo-mu" name="password" type="password" value=<%= @password %>>
+  </div>
+  <br>
+  <input class="btn" type="submit" value="ログイン">
+<% end %>

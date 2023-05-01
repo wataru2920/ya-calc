@@ -1,0 +1,52 @@
+<%= form_with(model: calc, local: true) do |form| %>
+  <% if calc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(calc.errors.count, "エラー") %>発生しました</h2>
+
+      <ul>
+      <% calc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :日付 %>
+    <%= form.date_field :hizuke %>
+  </div>
+
+  <div class="field">
+    <%= form.label :食費 %>
+    <%= form.text_field :food %>
+  </div>
+
+  <div class="field">
+    <%= form.label :日用品費 %>
+    <%= form.text_field :daily %>
+  </div>
+
+  <div class="field">
+    <%= form.label :住居費 %>
+    <%= form.text_field :housing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :交通費 %>
+    <%= form.text_field :traffic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :娯楽費 %>
+    <%= form.text_field :recreation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :その他費用 %>
+    <%= form.text_field :others %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
